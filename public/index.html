@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SCALE/OS, eksperymentalny system operacyjny wzrostu firmy.">
+  <title>SCALE/OS — Growth Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>.capture .loader{display:none}@media(max-width:600px){.hero__score{display:none}}</style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader__code">SYSTEM_BOOT / SCALE_OS</div>
+    <div class="loader__value" data-loader>00</div>
+    <div class="loader__line"><i></i></div>
+  </div>
+  <div class="grain"></div>
+  <div class="pointer"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#top">SCALE<span>/OS</span></a>
+    <div class="system-state"><i></i> SYSTEM ONLINE</div>
+    <nav>
+      <a href="#system">System</a>
+      <a href="#signals">Sygnały</a>
+      <a href="#simulation">Symulacja</a>
+    </nav>
+    <a class="topbar__cta" href="#simulation">RUN MODEL ↘</a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero__stamp mono">GROWTH INTELLIGENCE<br>ENGINE / VERSION 2.6</div>
+      <h1>
+        <span>GROWTH</span>
+        <span class="ghost">IS NOT</span>
+        <span class="electric">LUCK.</span>
+      </h1>
+      <p class="hero__lead">SCALE/OS zamienia chaos firmy<br>w system decyzji.</p>
+      <div class="hero__score">
+        <span class="mono">SCALE READINESS</span>
+        <strong data-readiness>84.7</strong><sup>%</sup>
+        <i><b></b></i>
+      </div>
+      <div class="hero__axis mono"><span>INSTINCT</span><i></i><span>INTELLIGENCE</span></div>
+      <div class="marquee"><div>REVENUE / RETENTION / MARGIN / VELOCITY / PEOPLE / REVENUE / RETENTION / MARGIN / VELOCITY / PEOPLE /&nbsp;</div><div>REVENUE / RETENTION / MARGIN / VELOCITY / PEOPLE / REVENUE / RETENTION / MARGIN / VELOCITY / PEOPLE /&nbsp;</div></div>
+    </section>
+
+    <section class="statement" id="system">
+      <div class="section-no mono reveal">(01) THE OPERATING SYSTEM</div>
+      <div class="statement__body">
+        <p class="eyebrow mono reveal">THE PROBLEM IS NOT DATA. IT IS DIRECTION.</p>
+        <h2 class="reveal">Więcej wykresów<br>nie daje <em>lepszych</em><br>decyzji.</h2>
+        <div class="statement__text reveal">
+          <p>Łączymy dane finansowe, sprzedażowe i operacyjne w jeden czytelny model. Pokazujemy nie tylko co się wydarzyło, ale co zrobić dalej.</p>
+          <span class="mono">ONE SYSTEM.<br>ONE DIRECTION.<br>NO VANITY METRICS.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="signals" id="signals">
+      <header class="signals__head">
+        <div class="mono reveal">(02) LIVE BUSINESS SIGNALS</div>
+        <h2 class="reveal">Your company,<br><span>decoded.</span></h2>
+        <div class="live mono"><i></i> LIVE DATA / 14:32:08</div>
+      </header>
+      <div class="metric-grid">
+        <article class="metric metric--wide reveal">
+          <header><span class="mono">REVENUE VELOCITY / 90D</span><span class="tag up">↑ 18.4%</span></header>
+          <strong data-revenue>2.84M</strong><small>PLN / ARR</small>
+          <svg class="line-chart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Wykres przychodu">
+            <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#563bff" stop-opacity=".45"/><stop offset="1" stop-color="#563bff" stop-opacity="0"/></linearGradient></defs>
+            <path class="area" d="M0 195 C80 180 100 160 155 170 S250 115 305 135 S405 80 465 105 S565 68 620 75 S720 10 800 22 L800 220 L0 220Z"/>
+            <path class="chart-path" d="M0 195 C80 180 100 160 155 170 S250 115 305 135 S405 80 465 105 S565 68 620 75 S720 10 800 22"/>
+          </svg>
+          <div class="chart-axis mono"><span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span></div>
+        </article>
+        <article class="metric metric--radial reveal">
+          <header><span class="mono">RETENTION CORE</span><span class="tag up">HEALTHY</span></header>
+          <div class="radial" style="--value:87"><div><strong>87</strong><sup>%</sup><span class="mono">NRR</span></div></div>
+          <p>+6.2 pp vs poprzedni kwartał</p>
+        </article>
+        <article class="metric metric--bars reveal">
+          <header><span class="mono">CHANNEL EFFICIENCY</span><span class="tag">Q4</span></header>
+          <div class="bar-row"><span class="mono">ORGANIC</span><i><b style="width:92%"></b></i><strong>4.8×</strong></div>
+          <div class="bar-row"><span class="mono">PARTNERS</span><i><b style="width:74%"></b></i><strong>3.7×</strong></div>
+          <div class="bar-row"><span class="mono">PAID</span><i><b style="width:47%"></b></i><strong>2.1×</strong></div>
+          <div class="bar-row"><span class="mono">OUTBOUND</span><i><b style="width:31%"></b></i><strong>1.4×</strong></div>
+        </article>
+        <article class="metric metric--alert reveal">
+          <div class="alert-orbit"><i></i></div>
+          <span class="mono">ANOMALY DETECTED / 07</span>
+          <h3>Marża rośnie<br>szybciej niż obrót.</h3>
+          <p>To dobry sygnał. Model rekomenduje zwiększenie budżetu kanału partnerskiego o 12%.</p>
+          <button data-scroll-sim>MODEL IMPACT ↘</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="decisions">
+      <div class="decisions__label mono reveal">(03) DECISION ENGINE</div>
+      <div class="decision-stream">
+        <article class="reveal"><span class="mono">SIGNAL / 001</span><h3>Churn segmentu PRO<br>przekracza próg.</h3><div><b>IMPACT</b><strong>−184K</strong><em>ARR / 12M</em></div><button>OPEN SIGNAL ↗</button></article>
+        <article class="reveal"><span class="mono">SIGNAL / 002</span><h3>Nowy handlowiec osiągnie<br>quota 19 dni wcześniej.</h3><div><b>IMPACT</b><strong>+92K</strong><em>MRR / 12M</em></div><button>OPEN SIGNAL ↗</button></article>
+        <article class="reveal"><span class="mono">SIGNAL / 003</span><h3>Pricing pozostawia<br>wartość na stole.</h3><div><b>IMPACT</b><strong>+11%</strong><em>MARGIN</em></div><button>OPEN SIGNAL ↗</button></article>
+      </div>
+    </section>
+
+    <section class="simulation" id="simulation">
+      <header class="simulation__head">
+        <div class="mono reveal">(04) FUTURE MODEL</div>
+        <h2 class="reveal">Change the inputs.<br><em>See the future.</em></h2>
+        <p class="reveal">Przesuń parametry. SCALE/OS przeliczy wpływ decyzji na przychód, marżę i runway.</p>
+      </header>
+      <div class="model reveal">
+        <div class="model__controls">
+          <div class="control">
+            <label><span>Wzrost budżetu marketingowego</span><output data-out="marketing">+20%</output></label>
+            <input type="range" name="marketing" min="-20" max="80" value="20">
+          </div>
+          <div class="control">
+            <label><span>Zmiana ceny</span><output data-out="price">+8%</output></label>
+            <input type="range" name="price" min="-10" max="30" value="8">
+          </div>
+          <div class="control">
+            <label><span>Nowe osoby w sprzedaży</span><output data-out="hires">+3</output></label>
+            <input type="range" name="hires" min="0" max="12" value="3">
+          </div>
+          <div class="control">
+            <label><span>Redukcja churnu</span><output data-out="churn">−2.0 pp</output></label>
+            <input type="range" name="churn" min="0" max="50" value="20">
+          </div>
+          <button class="run-model" data-run-model><span>RUN 12M SIMULATION</span><span>⌘ ↵</span></button>
+        </div>
+        <div class="model__result">
+          <div class="result__top mono"><span>PROJECTED STATE / M+12</span><span data-model-state>MODEL READY</span></div>
+          <div class="result__main">
+            <span class="mono">PROJECTED ARR</span>
+            <strong data-projected>4.12M</strong><small>PLN</small>
+            <div class="delta">↑ <span data-growth>45.1%</span></div>
+          </div>
+          <div class="result__grid">
+            <div><span class="mono">GROSS MARGIN</span><strong data-margin>71.2%</strong></div>
+            <div><span class="mono">RUNWAY</span><strong data-runway>24.8M</strong></div>
+            <div><span class="mono">CONFIDENCE</span><strong data-confidence>86%</strong></div>
+          </div>
+          <div class="result__plot"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div>
+          <button class="save-strategy" data-save>SAVE THIS STRATEGY / 01</button>
+          <p class="save-status mono" data-save-status></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="final__grid"></div>
+      <p class="mono">STOP GUESSING / START SCALING</p>
+      <h2>Build a company<br>that knows <em>why.</em></h2>
+      <a href="#simulation">RUN YOUR MODEL <span>↘</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__logo">SCALE<span>/OS</span></div>
+    <div class="footer__meta mono"><span>GROWTH INTELLIGENCE ENGINE</span><span>WARSZAWA / PL</span><span>HELLO@SCALE.OS</span><a href="#top">TOP ↑</a></div>
+  </footer>
+  <div class="toast mono" data-toast></div>
+</body>
+</html>
