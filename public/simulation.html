@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08090b">
+  <title>Simulation — SCALE/OS</title><meta name="description" content="Run an interactive business growth scenario with SCALE/OS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/pages.css">
+</head>
+<body class="product-page">
+  <header class="product-nav"><a class="product-nav__brand" href="/"><span>SCALE</span><b>/OS</b></a><button class="menu-toggle mono" type="button" aria-expanded="false">MENU</button><nav class="product-nav__links"><a href="/system.html">System</a><a href="/signals.html">Signals</a><a class="active" href="/simulation.html">Simulation</a><a href="/pricing.html">Pricing</a></nav><a class="nav-cta mono" href="#model">RUN A MODEL <span>↓</span></a></header>
+  <main>
+    <section class="page-hero" data-code="03">
+      <div class="page-hero__copy"><div class="eyebrow mono"><i></i> MODULE 03 / SIMULATION</div><h1>CHANGE THE<br>INPUT. SEE THE<br><span>FUTURE.</span></h1><p>Test strategic choices against the complete business model. Understand upside, tradeoffs and runway impact before spending the first euro.</p></div>
+      <div class="page-hero__metric"><span class="mono">MODEL CONFIDENCE / BASELINE</span><strong>88%</strong><p>Calculated from four connected growth levers and current operating economics.</p></div>
+    </section>
+    <section class="content-band" id="model">
+      <div class="content-intro"><div class="section-kicker mono">SCENARIO LAB / LIVE</div><div><h2>BUILD YOUR<br>NEXT QUARTER.</h2><p>Adjust the controls, run the model and save the resulting strategy. The calculation is processed by the SCALE/OS backend, not hard-coded into the page.</p></div></div>
+      <div class="model-shell">
+        <form class="model-controls" id="model-form" onsubmit="return false">
+          <div class="eyebrow mono"><i></i> STRATEGIC INPUTS</div><h2>Set the levers.</h2>
+          <div class="control-row"><label>MARKETING CHANGE <output data-output="marketing">20%</output></label><input type="range" name="marketing" min="-20" max="80" value="20"></div>
+          <div class="control-row"><label>PRICING CHANGE <output data-output="price">8%</output></label><input type="range" name="price" min="-10" max="30" value="8"></div>
+          <div class="control-row"><label>NEW SALES HIRES <output data-output="hires">3</output></label><input type="range" name="hires" min="0" max="12" value="3"></div>
+          <div class="control-row"><label>CHURN REDUCTION <output data-output="churn">20%</output></label><input type="range" name="churn" min="0" max="50" value="20"></div>
+          <button class="run-button" type="button" data-run-model>RUN THE MODEL ↗</button>
+        </form>
+        <section class="model-results">
+          <div class="model-results__head mono"><span>12-MONTH PROJECTION</span><span data-model-state>READY</span></div>
+          <div class="model-primary"><span class="mono">PROJECTED ARR</span><strong data-projected>€4.03M</strong></div>
+          <div class="model-stats"><div><span class="mono">GROWTH</span><strong data-growth>+41.8%</strong></div><div><span class="mono">MARGIN</span><strong data-margin>69.3%</strong></div><div><span class="mono">RUNWAY</span><strong data-runway>23.8 MO</strong></div><div><span class="mono">CONFIDENCE</span><strong data-confidence>88%</strong></div></div>
+          <button class="save-button" type="button" data-save-model>SAVE STRATEGY / GENERATE ID</button>
+        </section>
+      </div>
+    </section>
+    <section class="content-band content-band--paper">
+      <div class="content-intro"><div class="section-kicker mono">WHAT THE MODEL READS</div><div><h2>IMPACT, NOT<br>VANITY METRICS.</h2></div></div>
+      <div class="explain-grid"><article><span>01 / UPSIDE</span><h3>Revenue expansion</h3><p>Models acquisition volume, price realization and sales capacity together.</p></article><article><span>02 / TRADEOFF</span><h3>Margin pressure</h3><p>Accounts for the operating cost required to achieve projected growth.</p></article><article><span>03 / RESILIENCE</span><h3>Runway safety</h3><p>Tests whether the plan leaves enough time and capital for execution.</p></article></div>
+    </section>
+    <section class="closing-panel"><div class="mono">PLANS / SCALE THE ENGINE</div><h2>TURN THE MODEL<br>INTO A SYSTEM.</h2><a class="button button--dark" href="/pricing.html">VIEW PRICING <span>↗</span></a></section>
+  </main>
+  <footer class="product-footer"><a class="product-nav__brand" href="/"><span>SCALE</span><b>/OS</b></a><p>Growth intelligence for companies that refuse to scale by accident.</p><div><a href="/system.html">System</a><a href="/signals.html">Signals</a><a href="/simulation.html">Simulation</a><a href="/pricing.html">Pricing</a></div><span class="mono">© 2026 / ENGINE 2.6</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

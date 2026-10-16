@@ -10,6 +10,14 @@ python3 server.py
 
 Otwórz `http://localhost:8001`.
 
+## Struktura produktu
+
+- `/` — strona główna i wyjaśnienie wartości
+- `/system.html` — architektura systemu
+- `/signals.html` — sygnały i kolejka decyzji
+- `/simulation.html` — interaktywny model scenariuszy
+- `/pricing.html` — plany i porównanie funkcji
+
 ## API
 
 - `GET /api/health`
