@@ -29,6 +29,25 @@ if (menuToggle && navLinks) {
   });
 }
 
+const transitionColors = {
+  "/": "#563bff",
+  "/index.html": "#563bff",
+  "/system.html": "#563bff",
+  "/signals.html": "#d8ff3e",
+  "/simulation.html": "#5fffe7",
+  "/pricing.html": "#e8e8e2"
+};
+document.documentElement.style.setProperty("--transition-color", transitionColors[location.pathname] || "#563bff");
+$$('a[href]').forEach(link => link.addEventListener("click", event => {
+  const target = new URL(link.href, location.href);
+  const internalPage = target.origin === location.origin && target.pathname !== location.pathname;
+  if (!internalPage || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target === "_blank") return;
+  event.preventDefault();
+  document.body.style.setProperty("--transition-color", transitionColors[target.pathname] || "#563bff");
+  document.body.classList.add("is-leaving");
+  setTimeout(() => location.href = target.href, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 430);
+}));
+
 const canvas = $("#field");
 if (canvas) {
   const ctx = canvas.getContext("2d");

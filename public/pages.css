@@ -1,6 +1,13 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 .product-page{margin:0;background:#08090b;color:#e8e8e2;font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+.product-page{--transition-color:#563bff}
+.product-page:before,.product-page:after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none}
+.product-page:before{background:var(--transition-color);animation:page-reveal .72s cubic-bezier(.76,0,.24,1) forwards}
+.product-page:after{background:var(--transition-color);transform:translateX(-101%)}
+.product-page.is-leaving:after{animation:page-leave .52s cubic-bezier(.76,0,.24,1) forwards}
+@keyframes page-reveal{0%{transform:translateX(0)}100%{transform:translateX(101%)}}
+@keyframes page-leave{0%{transform:translateX(-101%)}100%{transform:translateX(0)}}
 .product-page a{color:inherit;text-decoration:none}
 .product-page .mono{font-family:"DM Mono",monospace;letter-spacing:.08em}
 .product-nav{height:82px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 3.2vw;border-bottom:1px solid rgba(232,232,226,.16);position:relative;z-index:20;background:#08090b}
@@ -121,4 +128,4 @@ html{scroll-behavior:smooth}
   .value-section,.module-section,.content-band{padding:18vw 5vw}.value-section h2,.section-head h2,.outcome-section h2,.page-hero h1{font-size:11vw}.module-card{padding:1.5rem}.outcome-section__visual{min-height:430px}.outcome-section__copy{padding:18vw 5vw}.closing-panel{padding:18vw 5vw}.product-footer{grid-template-columns:1fr}
   .architecture{grid-template-columns:1fr}.flow-line{grid-template-columns:1fr}.signal-box,.signal-box--wide{grid-column:span 12}.signal-box--full{grid-template-columns:1fr}.model-controls,.model-results{padding:1.5rem}.model-results{min-height:600px}.model-primary strong{font-size:17vw}.explain-grid{grid-template-columns:1fr}.pricing-hero{padding:18vw 5vw 10vw}.pricing-grid{margin:4vw 5vw 18vw}.comparison{padding:0 5vw 18vw;overflow:auto}.comparison table{min-width:660px}
 }
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;scroll-behavior:auto!important}.product-page:before,.product-page:after{display:none}}
